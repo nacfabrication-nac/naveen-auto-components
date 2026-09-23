@@ -29,7 +29,7 @@ export const SEO = ({ title, description, canonical, schema, image, keywords }) 
     "sameAs": [
       "https://share.google/U57zAGwxO9ujDK0uy",
       "https://www.linkedin.com/company/naveen-auto-components/",
-      "https://www.facebook.com/naveenautocomponents",
+      "https://www.facebook.com/profile.php?id=61594474510071",
       "https://twitter.com/naveenauto",
       "https://www.instagram.com/naveenautocomponents"
     ],

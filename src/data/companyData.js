@@ -29,7 +29,7 @@ export const companyData = {
   social: {
     googleBusiness: "https://share.google/U57zAGwxO9ujDK0uy",
     linkedin: "https://www.linkedin.com/company/naveen-auto-components/",
-    facebook: "https://www.facebook.com/naveenautocomponents",
+    facebook: "https://www.facebook.com/profile.php?id=61594474510071",
     twitter: "https://twitter.com/naveenauto",
     instagram: "https://www.instagram.com/naveenautocomponents"
   },
