@@ -28,10 +28,10 @@ export const SEO = ({ title, description, canonical, schema, image, keywords }) 
     "hasMap": "https://share.google/U57zAGwxO9ujDK0uy",
     "sameAs": [
       "https://share.google/U57zAGwxO9ujDK0uy",
-      "https://www.linkedin.com/company/naveen-auto-components/",
+      "https://www.linkedin.com/in/naveen-auto-components-undefined-2b823643a/",
       "https://www.facebook.com/profile.php?id=61594474510071",
       "https://twitter.com/naveenauto",
-      "https://www.instagram.com/naveenautocomponents"
+      "https://www.instagram.com/naveenautocomponents/"
     ],
     "telephone": "+91-44-26360415",
     "email": "naveenauto2017@gmail.com",

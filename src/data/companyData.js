@@ -28,10 +28,10 @@ export const companyData = {
   googleShareLink: "https://share.google/U57zAGwxO9ujDK0uy",
   social: {
     googleBusiness: "https://share.google/U57zAGwxO9ujDK0uy",
-    linkedin: "https://www.linkedin.com/company/naveen-auto-components/",
+    linkedin: "https://www.linkedin.com/in/naveen-auto-components-undefined-2b823643a/",
     facebook: "https://www.facebook.com/profile.php?id=61594474510071",
     twitter: "https://twitter.com/naveenauto",
-    instagram: "https://www.instagram.com/naveenautocomponents"
+    instagram: "https://www.instagram.com/naveenautocomponents/"
   },
   locations: {
     office: {
