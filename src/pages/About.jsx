@@ -174,6 +174,21 @@ export const About = () => {
                     </ul>
                   </div>
 
+                  <div className="mb-3">
+                    <a 
+                      href="/documents/NAC-ISO-9001-2015-Certificate.svg" 
+                      download="NAC-ISO-9001-2015-Certificate.svg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-warning w-100 fw-bold py-2 shadow-sm text-navy d-flex align-items-center justify-content-center gap-2"
+                      style={{ backgroundColor: '#f57c00', borderColor: '#f57c00', color: '#fff' }}
+                    >
+                      <i className="bi bi-file-earmark-pdf-fill fs-5"></i>
+                      <span>Download ISO 9001:2015 Certificate</span>
+                      <i className="bi bi-download"></i>
+                    </a>
+                  </div>
+
                   <div className="small text-warning font-monospace text-center">
                     ISO 9001:2015 Certified Manufacturing
                   </div>

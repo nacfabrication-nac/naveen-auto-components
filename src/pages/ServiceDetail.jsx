@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { Container, Row, Col, Card, Badge, Button, ListGroup } from 'react-bootstrap';
+import { Container, Row, Col, Card, Badge, Button, ListGroup, Accordion } from 'react-bootstrap';
 import { SEO } from '../components/SEO';
 import { PageBanner } from '../components/PageBanner';
 import { servicesData } from '../data/servicesData';
 import { projectsData } from '../data/projectsData';
 import { IndustrialGraphic } from '../components/IndustrialGraphic';
 import { ImageLightboxModal } from '../components/ImageLightboxModal';
+import { InlineQuoteForm } from '../components/InlineQuoteForm';
 
 export const ServiceDetail = () => {
   const { slug } = useParams();
@@ -48,11 +49,24 @@ export const ServiceDetail = () => {
     "provider": {
       "@type": "LocalBusiness",
       "name": "Naveen Auto Components",
-      "url": "https://naveenautocomponents.com"
+      "url": "https://www.naveenautocomponents.com"
     },
     "description": service.fullDescription,
     "areaServed": "Tamil Nadu, India"
   };
+
+  const faqSchema = service.faq && service.faq.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": service.faq.map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a
+      }
+    }))
+  } : null;
 
   // Map real shop floor photos for each service content page
   const realPhotoMap = {
@@ -67,11 +81,11 @@ export const ServiceDetail = () => {
   return (
     <>
       <SEO 
-        title={`${service.seoTitle} | Naveen Auto Components`}
-        description={`${service.seoDesc} Engineered by Naveen Auto Components (naveenautocomponents.com).`}
-        keywords={`naveenautocomponents.com, Naveen Auto Components ${service.title}, ${service.title} fabrication, heavy engineering ${service.slug}, Chennai, Cuddalore, NAC`}
+        title={`${service.seoTitle}`}
+        description={service.seoDesc}
+        keywords={service.seoKeywords || `${service.title} fabrication Chennai, heavy engineering ${service.slug}, NAC Chennai, Cuddalore`}
         canonical={`/services/${service.slug}`}
-        schema={serviceSchema}
+        schema={faqSchema ? [serviceSchema, faqSchema] : serviceSchema}
       />
 
       <PageBanner 
@@ -89,11 +103,15 @@ export const ServiceDetail = () => {
         <Container className="py-lg-4">
           <Row className="g-5">
             <Col lg={8}>
-              <Badge bg="warning" className="text-navy fw-bold px-3 py-2 text-uppercase mb-3" style={{ backgroundColor: '#f57c00' }}>
+              <Badge bg="warning" className="text-navy fw-bold px-3 py-2 text-uppercase mb-3" style={{ backgroundColor: '#f57c00', color: '#fff' }}>
                 Technical Specification Overview
               </Badge>
-              <h1 className="h2 fw-bold text-navy mb-4">{service.title}</h1>
+              <h1 className="display-6 fw-bold text-navy mb-4">{service.title}</h1>
               
+              <h2 className="h4 fw-bold text-warning mb-3" style={{ color: '#f57c00' }}>
+                {service.title} Specifications &amp; Standards — Chennai &amp; Cuddalore Manufacturing
+              </h2>
+
               <p className="lead text-secondary mb-4" style={{ lineHeight: '1.7' }}>
                 {service.fullDescription}
               </p>
@@ -105,7 +123,7 @@ export const ServiceDetail = () => {
                     <h3 className="h5 fw-bold text-navy mb-0">
                       <i className="bi bi-images me-2 text-warning" style={{ color: '#f57c00' }}></i> Real Shop Floor Fabrication Spec Gallery
                     </h3>
-                    <Badge bg="warning" className="text-navy fw-bold px-3 py-2 text-uppercase" style={{ backgroundColor: '#f57c00' }}>
+                    <Badge bg="warning" className="text-navy fw-bold px-3 py-2 text-uppercase" style={{ backgroundColor: '#f57c00', color: '#fff' }}>
                       {service.gallery.length} Production Specs
                     </Badge>
                   </div>
@@ -128,7 +146,7 @@ export const ServiceDetail = () => {
                             />
                             <div 
                               className="position-absolute top-0 start-0 m-2 px-2 py-1 bg-warning text-navy rounded fw-bold small shadow-sm"
-                              style={{ backgroundColor: '#f57c00', zIndex: 2, fontSize: '0.75rem' }}
+                              style={{ backgroundColor: '#f57c00', color: '#fff', zIndex: 2, fontSize: '0.75rem' }}
                             >
                               Spec #{index + 1}
                             </div>
@@ -169,7 +187,7 @@ export const ServiceDetail = () => {
               <Card className="border-0 shadow-sm bg-light mb-4">
                 <Card.Body className="p-4">
                   <h3 className="h5 fw-bold text-navy mb-3">
-                    <i className="bi bi-gear-wide-connected text-warning me-2"></i> Fabrication Capabilities & Features
+                    <i className="bi bi-gear-wide-connected text-warning me-2" style={{ color: '#f57c00' }}></i> Fabrication Capabilities &amp; Standards Compliance
                   </h3>
                   <ListGroup variant="flush" className="bg-transparent">
                     {service.capabilities.map((cap, i) => (
@@ -184,13 +202,13 @@ export const ServiceDetail = () => {
 
               {/* Machinery Utilized */}
               <h3 className="h5 fw-bold text-navy mb-3">
-                <i className="bi bi-tools text-warning me-2"></i> Infrastructure & Machinery Deployed
+                <i className="bi bi-tools text-warning me-2" style={{ color: '#f57c00' }}></i> Infrastructure &amp; Machinery Deployed
               </h3>
               <Row className="g-3 mb-5">
                 {service.machineryUsed.map((m, i) => (
                   <Col key={i} md={6}>
                     <div className="p-3 bg-white border rounded shadow-sm">
-                      <i className="bi bi-wrench-adjustable text-warning me-2"></i>
+                      <i className="bi bi-wrench-adjustable text-warning me-2" style={{ color: '#f57c00' }}></i>
                       <span className="small fw-bold text-navy">{m}</span>
                     </div>
                   </Col>
@@ -201,7 +219,7 @@ export const ServiceDetail = () => {
               {relatedProjects.length > 0 && (
                 <div className="mb-5">
                   <h3 className="h4 fw-bold text-navy mb-3">
-                    <i className="bi bi-journal-check text-warning me-2"></i> Project References & Executed Work
+                    <i className="bi bi-journal-check text-warning me-2" style={{ color: '#f57c00' }}></i> Executed Work &amp; Institutional Clients
                   </h3>
                   <Row className="g-3">
                     {relatedProjects.map((proj) => (
@@ -219,6 +237,28 @@ export const ServiceDetail = () => {
                 </div>
               )}
 
+              {/* FAQ Accordion Section — React Bootstrap Accordion */}
+              {service.faq && service.faq.length > 0 && (
+                <div className="mb-5" id="faq">
+                  <h2 className="h4 fw-bold text-navy mb-4">
+                    <i className="bi bi-question-circle-fill text-warning me-2" style={{ color: '#f57c00' }}></i>
+                    Frequently Asked Questions — {service.title}
+                  </h2>
+                  <Accordion defaultActiveKey="0" flush className="border rounded overflow-hidden shadow-sm">
+                    {service.faq.map((item, idx) => (
+                      <Accordion.Item eventKey={String(idx)} key={idx} className="border-bottom">
+                        <Accordion.Header>
+                          <span className="fw-semibold text-navy">{item.q}</span>
+                        </Accordion.Header>
+                        <Accordion.Body className="text-secondary" style={{ lineHeight: '1.7', fontSize: '0.95rem' }}>
+                          {item.a}
+                        </Accordion.Body>
+                      </Accordion.Item>
+                    ))}
+                  </Accordion>
+                </div>
+              )}
+
               {/* Related Services Internal Links */}
               <div className="p-4 bg-light rounded border">
                 <h4 className="h6 fw-bold text-navy mb-2">Explore Related Capabilities:</h4>
@@ -233,34 +273,28 @@ export const ServiceDetail = () => {
                   </Button>
                 </div>
               </div>
+
             </Col>
 
-            {/* Sidebar CTA & Client List */}
+            {/* Sidebar Inline Quote Form & Client List */}
             <Col lg={4}>
-              <Card className="border-0 shadow-lg bg-navy text-white p-4 sticky-top" style={{ top: '100px', backgroundColor: '#0b1e36' }}>
-                <Card.Body>
-                  <h3 className="h4 fw-bold text-warning mb-3">Get a Customized Quotation</h3>
-                  <p className="small text-white-50 mb-4">
-                    Send your CAD drawings, thickness specs, and volume requirements to our engineering team in Chennai.
-                  </p>
+              <div className="sticky-top" style={{ top: '100px' }}>
+                <InlineQuoteForm currentServiceSlug={slug} />
 
-                  <Button as={Link} to="/contact" variant="warning" size="lg" className="w-100 fw-bold py-3 text-navy mb-4" style={{ backgroundColor: '#f57c00', borderColor: '#f57c00', color: '#fff' }}>
-                    <i className="bi bi-envelope-paper-fill me-2"></i> Request RFQ Now
-                  </Button>
-
-                  <hr className="border-secondary mb-4" />
-
-                  <h4 className="h6 fw-bold text-white mb-2">Key Institutional Clients:</h4>
-                  <ul className="list-unstyled small text-white-50 mb-0">
-                    {service.applicableClients.map((client, i) => (
-                      <li key={i} className="mb-2">
-                        <i className="bi bi-building me-2 text-warning"></i>
-                        {client}
-                      </li>
-                    ))}
-                  </ul>
-                </Card.Body>
-              </Card>
+                <Card className="border-0 shadow-sm bg-light p-4 mt-4">
+                  <Card.Body className="p-0">
+                    <h4 className="h6 fw-bold text-navy mb-2">Key Institutional Clients:</h4>
+                    <ul className="list-unstyled small text-secondary mb-0">
+                      {service.applicableClients.map((client, i) => (
+                        <li key={i} className="mb-2">
+                          <i className="bi bi-building me-2 text-warning" style={{ color: '#f57c00' }}></i>
+                          {client}
+                        </li>
+                      ))}
+                    </ul>
+                  </Card.Body>
+                </Card>
+              </div>
             </Col>
           </Row>
         </Container>
@@ -276,3 +310,4 @@ export const ServiceDetail = () => {
     </>
   );
 };
+

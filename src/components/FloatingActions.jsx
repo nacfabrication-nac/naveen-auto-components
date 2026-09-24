@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { companyData } from '../data/companyData';
 
 export const FloatingActions = () => {
@@ -24,6 +25,7 @@ export const FloatingActions = () => {
   const digits = companyData.contact?.mobile ? companyData.contact.mobile.replace(/[^0-9]/g, '') : '917550277799';
   const rawPhone = digits.length === 10 ? `91${digits}` : digits;
   const displayPhone = companyData.contact?.mobile || '+91 75502 77799';
+  const whatsappMsg = encodeURIComponent("Hi NAC, I need a quote for heavy engineering fabrication.");
 
   return (
     <>
@@ -96,11 +98,16 @@ export const FloatingActions = () => {
             background-color: #e67300;
             transform: translateY(-5px);
           }
+
+          /* Mobile Sticky Bottom CTA Bar */
+          .mobile-sticky-cta-bar {
+            display: none;
+          }
           
           @media (max-width: 768px) {
             .floating-actions-container {
-              bottom: 20px;
-              right: 20px;
+              bottom: 75px;
+              right: 15px;
               gap: 10px;
             }
             .floating-btn {
@@ -108,10 +115,45 @@ export const FloatingActions = () => {
               height: 45px;
               font-size: 1.2rem;
             }
+
+            .mobile-sticky-cta-bar {
+              display: flex;
+              position: fixed;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 60px;
+              background-color: #0b1e36;
+              z-index: 1060;
+              box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+              border-top: 2px solid #f57c00;
+            }
+            .mobile-cta-item {
+              flex: 1;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 6px;
+              color: #ffffff;
+              text-decoration: none;
+              font-weight: 700;
+              font-size: 0.85rem;
+              border-right: 1px solid rgba(255,255,255,0.1);
+              transition: background-color 0.2s ease;
+            }
+            .mobile-cta-item:last-child {
+              border-right: none;
+              background-color: #f57c00;
+              color: #ffffff;
+            }
+            .mobile-cta-item:active {
+              opacity: 0.85;
+            }
           }
         `}
       </style>
 
+      {/* Floating Action Icons (Desktop & Mobile) */}
       <div className="floating-actions-container">
         {/* Google Business Profile Button */}
         <a href={companyData.googleShareLink || 'https://share.google/U57zAGwxO9ujDK0uy'} target="_blank" rel="noopener noreferrer" className="floating-btn btn-google" title="Google Business Profile & Reviews" aria-label="Google Business Profile & Reviews">
@@ -123,8 +165,8 @@ export const FloatingActions = () => {
           <i className="bi bi-telephone-fill"></i>
         </a>
         
-        {/* WhatsApp Button */}
-        <a href={`https://wa.me/${rawPhone}`} target="_blank" rel="noopener noreferrer" className="floating-btn btn-whatsapp" title="WhatsApp Us" aria-label="WhatsApp Us">
+        {/* WhatsApp Button with Pre-filled Message */}
+        <a href={`https://wa.me/${rawPhone}?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer" className="floating-btn btn-whatsapp" title="WhatsApp Us" aria-label="WhatsApp Us">
           <i className="bi bi-whatsapp"></i>
         </a>
         
@@ -137,6 +179,22 @@ export const FloatingActions = () => {
         >
           <i className="bi bi-arrow-up"></i>
         </button>
+      </div>
+
+      {/* Sticky Bottom Bar for Mobile Screen Devices */}
+      <div className="mobile-sticky-cta-bar">
+        <a href={`tel:${displayPhone}`} className="mobile-cta-item">
+          <i className="bi bi-telephone-fill text-warning fs-6"></i>
+          <span>Call</span>
+        </a>
+        <a href={`https://wa.me/${rawPhone}?text=${whatsappMsg}`} target="_blank" rel="noopener noreferrer" className="mobile-cta-item">
+          <i className="bi bi-whatsapp text-success fs-6"></i>
+          <span>WhatsApp</span>
+        </a>
+        <Link to="/contact" className="mobile-cta-item">
+          <i className="bi bi-file-earmark-text-fill fs-6"></i>
+          <span>Get Quote</span>
+        </Link>
       </div>
     </>
   );

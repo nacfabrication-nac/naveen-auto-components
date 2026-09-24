@@ -10,6 +10,11 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import './index.css';
 import './App.css';
 
+// AOS Animation Library — loaded from npm (removes CDN render-blocking)
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({ duration: 800, easing: 'ease-in-out', once: true, offset: 100 });
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>

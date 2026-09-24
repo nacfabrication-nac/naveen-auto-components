@@ -2,18 +2,18 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export const SEO = ({ title, description, canonical, schema, image, keywords }) => {
-  const siteUrl = 'https://naveenautocomponents.com';
+  const siteUrl = 'https://www.naveenautocomponents.com';
   const fullTitle = title
-    ? `${title}`
-    : 'Naveen Auto Components | Heavy Engineering & Fabrication Chennai Cuddalore';
+    ? title.includes('|') ? title : `${title} | Naveen Auto Components`
+    : 'Heavy Engineering Fabrication & Storage Tank Manufacturer in Chennai | Naveen Auto Components';
   const metaDescription =
     description ||
-    'Naveen Auto Components (naveenautocomponents.com) - ISO 9001:2015 certified heavy engineering fabrication company in Chennai & Cuddalore. Storage tanks, steam pipeline ducts, PEB structural fabrication, rail/bus coach parts, and air blowers.';
+    'Naveen Auto Components — ISO 9001:2015 certified heavy engineering fabrication company in Chennai & Cuddalore. Storage tanks, steam pipeline ducts, PEB structural fabrication, rail coach parts, and industrial air blowers.';
   
-  const defaultKeywords = 'Naveen Auto Components, naveenautocomponents.com, NAC Chennai, heavy engineering fabrication Chennai, heavy fabrication Cuddalore, storage tank manufacturer Tamil Nadu, PEB structural fabrication, steam distribution duct, pressure vessels India, ISO 9001:2015 metal fabrication';
+  const defaultKeywords = 'heavy engineering fabrication Chennai, storage tank manufacturer Tamil Nadu, PEB structural fabrication Chennai, steam pipeline fabrication, pressure vessel manufacturer Tamil Nadu, IS 2062 steel fabrication, ferrous non-ferrous fabrication Thirumullaivoyal, heavy fabrication SIDCO Kattur, ISO 9001:2015 certified fabrication';
   const metaKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
 
-  const currentCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
+  const currentCanonical = canonical ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical.startsWith('/') ? canonical : '/' + canonical}`) : `${siteUrl}/`;
   const metaImage = image ? (image.startsWith('http') ? image : `${siteUrl}${image}`) : `${siteUrl}/images/logos/nac-logo-white-chennai.webp`;
 
   // Global Organization / LocalBusiness + Manufacturer Schema
@@ -24,7 +24,7 @@ export const SEO = ({ title, description, canonical, schema, image, keywords }) 
     "legalName": "Naveen Auto Components",
     "alternateName": "NAC",
     "image": `${siteUrl}/images/logos/nac-logo-white-chennai.webp`,
-    "url": "https://naveenautocomponents.com/",
+    "url": "https://www.naveenautocomponents.com/",
     "hasMap": "https://share.google/U57zAGwxO9ujDK0uy",
     "sameAs": [
       "https://share.google/U57zAGwxO9ujDK0uy",
@@ -106,6 +106,10 @@ export const SEO = ({ title, description, canonical, schema, image, keywords }) 
       <meta name="keywords" content={metaKeywords} />
       <link rel="canonical" href={currentCanonical} />
 
+      {/* Hreflang Tags for India & Default */}
+      <link rel="alternate" hrefLang="en-IN" href={currentCanonical} />
+      <link rel="alternate" hrefLang="x-default" href={currentCanonical} />
+
       {/* Open Graph */}
       <meta property="og:type" content="website" />
       <meta property="og:title" content={fullTitle} />
@@ -127,3 +131,4 @@ export const SEO = ({ title, description, canonical, schema, image, keywords }) 
     </Helmet>
   );
 };
+

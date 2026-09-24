@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useEffect } from 'react';
 import { createBrowserRouter, Outlet, ScrollRestoration, useLocation, Navigate } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
+import AOS from 'aos';
 import { MainNavbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { FloatingActions } from './components/FloatingActions';
@@ -11,6 +12,8 @@ const Home = lazy(() => import('./pages/Home').then(m => ({ default: m.Home })))
 const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })));
 const ServicesHub = lazy(() => import('./pages/ServicesHub').then(m => ({ default: m.ServicesHub })));
 const ServiceDetail = lazy(() => import('./pages/ServiceDetail').then(m => ({ default: m.ServiceDetail })));
+const HyperlocalChennai = lazy(() => import('./pages/HyperlocalChennai').then(m => ({ default: m.HyperlocalChennai })));
+const LocationTamilNadu = lazy(() => import('./pages/LocationTamilNadu').then(m => ({ default: m.LocationTamilNadu })));
 const Facilities = lazy(() => import('./pages/Facilities').then(m => ({ default: m.Facilities })));
 const Projects = lazy(() => import('./pages/Projects').then(m => ({ default: m.Projects })));
 const Clients = lazy(() => import('./pages/Clients').then(m => ({ default: m.Clients })));
@@ -36,14 +39,7 @@ const RootLayout = () => {
   const location = useLocation();
 
   useEffect(() => {
-    if (window.AOS) {
-      window.AOS.init({
-        duration: 800,
-        once: true,
-        offset: 50,
-      });
-      window.AOS.refresh();
-    }
+    AOS.refresh();
   }, [location.pathname]);
 
   return (
@@ -73,6 +69,8 @@ export const router = createBrowserRouter([
       { path: "certifications", element: <Navigate to="/about" replace /> },
       { path: "services", element: <ServicesHub /> },
       { path: "services/:slug", element: <ServiceDetail /> },
+      { path: "heavy-fabrication-thirumullaivoyal-chennai", element: <HyperlocalChennai /> },
+      { path: "storage-tank-manufacturer-tamil-nadu", element: <LocationTamilNadu /> },
       { path: "facilities", element: <Facilities /> },
       { path: "projects", element: <Projects /> },
       { path: "clients", element: <Clients /> },
@@ -83,3 +81,4 @@ export const router = createBrowserRouter([
     ]
   }
 ]);
+

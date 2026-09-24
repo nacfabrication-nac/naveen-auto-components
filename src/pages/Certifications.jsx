@@ -33,9 +33,23 @@ export const Certifications = () => {
                   <h2 className="fw-bold mb-0">ISO 9001:2015 Certified</h2>
                 </div>
                 <Card.Body className="p-4 p-lg-5 text-center bg-light">
-                  <p className="lead text-secondary mb-0" style={{ lineHeight: '1.8' }}>
+                  <p className="lead text-secondary mb-4" style={{ lineHeight: '1.8' }}>
                     Naveen Auto Components is an ISO 9001:2015 certified organization. This prestigious certification reflects our rigorous quality management systems, stringent inspection processes, and our commitment to delivering defect-free, precision-engineered metal fabrication products to all our clients.
                   </p>
+                  <div>
+                    <a 
+                      href="/documents/NAC-ISO-9001-2015-Certificate.svg" 
+                      download="NAC-ISO-9001-2015-Certificate.svg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-warning btn-lg fw-bold px-4 py-3 text-navy shadow-sm d-inline-flex align-items-center gap-2"
+                      style={{ backgroundColor: '#f57c00', borderColor: '#f57c00', color: '#fff' }}
+                    >
+                      <i className="bi bi-file-earmark-pdf-fill fs-5"></i>
+                      <span>Download ISO 9001:2015 Certificate (PDF / Spec)</span>
+                      <i className="bi bi-download"></i>
+                    </a>
+                  </div>
                 </Card.Body>
               </Card>
             </Col>

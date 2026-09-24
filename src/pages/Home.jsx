@@ -28,14 +28,17 @@ export const Home = () => {
   return (
     <>
       <SEO 
-        title="Naveen Auto Components | Heavy Engineering Fabrication & Storage Tanks Chennai Cuddalore"
-        description="Naveen Auto Components (naveenautocomponents.com) - ISO 9001:2015 certified heavy engineering fabrication company with 2 units in Chennai & Cuddalore. Specializing in Storage Tanks, Steam Distribution Ducts, PEB Structural Fabrication & Rail Coach Parts."
-        keywords="naveenautocomponents.com, Naveen Auto Components, NAC Chennai, heavy engineering fabrication Chennai, heavy fabrication Cuddalore, storage tank manufacturer Tamil Nadu, PEB structural fabrication, steam distribution duct"
+        title="Heavy Engineering Fabrication & Storage Tank Manufacturer in Chennai | Naveen Auto Components"
+        description="Naveen Auto Components — ISO 9001:2015 certified heavy engineering fabrication company with 2 units in Chennai & Cuddalore. Storage Tanks, Steam Pipeline Ducts, PEB Structural Fabrication, Rail Coach Components & Pressure Vessels. Serving Tamil Nadu since 2017."
+        keywords="heavy engineering fabrication Chennai, storage tank manufacturer Tamil Nadu, PEB structural fabrication, steam pipeline fabrication Chennai, pressure vessel manufacturer Tamil Nadu, IS 2062 steel fabrication, ferrous non-ferrous fabrication SIDCO Thirumullaivoyal, EOT crane fabrication Chennai, Naveen Auto Components NAC"
         canonical="/"
         schema={homeSchema}
       />
 
       <HeroCarousel />
+
+      {/* Hidden SEO H1 — visible to screen readers & Googlebot */}
+      <h1 className="visually-hidden">Heavy Engineering Fabrication & Storage Tank Manufacturer in Chennai, Tamil Nadu — Naveen Auto Components (ISO 9001:2015)</h1>
 
       {/* Quick Stats Strip */}
       <section className="bg-dark text-white py-4 border-top border-bottom border-amber" style={{ backgroundColor: '#071322', borderColor: '#f57c00' }}>

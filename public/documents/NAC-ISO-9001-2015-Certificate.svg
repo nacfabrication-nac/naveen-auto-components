@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" width="100%" height="100%">
+  <rect width="800" height="1100" fill="#ffffff"/>
+  <rect x="20" y="20" width="760" height="1060" fill="none" stroke="#0b1e36" stroke-width="8"/>
+  <rect x="35" y="35" width="730" height="1030" fill="none" stroke="#f57c00" stroke-width="3"/>
+  
+  <!-- Header -->
+  <text x="400" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#0b1e36">CERTIFICATE OF REGISTRATION</text>
+  <text x="400" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#f57c00" font-weight="bold">QUALITY MANAGEMENT SYSTEM — ISO 9001:2015</text>
+  
+  <line x1="150" y1="180" x2="650" y2="180" stroke="#0b1e36" stroke-width="2"/>
+  
+  <text x="400" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#555555">This is to certify that the Quality Management System of</text>
+  
+  <!-- Company Name -->
+  <text x="400" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#0b1e36">NAVEEN AUTO COMPONENTS</text>
+  <text x="400" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#f57c00">(NAC)</text>
+  
+  <!-- Locations -->
+  <text x="400" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#333333" font-weight="bold">Registered Office:</text>
+  <text x="400" y="398" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">No-2C/5, SP-64, 3rd Main Road, Ambattur Industrial Estate, Chennai – 600058, Tamil Nadu, India</text>
+  
+  <text x="400" y="435" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#333333" font-weight="bold">Manufacturing Units:</text>
+  <text x="400" y="458" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">Factory 1 (Chennai Unit): No-T93, SIDCO Women Industrial Park, Kattur, Thirumullaivoyal, Chennai – 600062</text>
+  <text x="400" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">Factory 2 (Cuddalore Unit): No-94/2D, Cuddalore-Chidambaram Road (NH-32), Kotthattai Village, Chidambaram – 608501</text>
+  
+  <line x1="200" y1="515" x2="600" y2="515" stroke="#dddddd" stroke-width="1"/>
+  
+  <!-- Scope -->
+  <text x="400" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0b1e36">SCOPE OF CERTIFICATION</text>
+  
+  <rect x="100" y="580" width="600" height="150" fill="#f8f9fa" rx="10" stroke="#e0e0e0"/>
+  <text x="400" y="615" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#333333" font-weight="bold">Heavy Engineering Fabrication &amp; Processing Equipment Manufacture</text>
+  <text x="400" y="645" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">Ferrous &amp; Non-Ferrous Metal Fabrication, Industrial Storage Tanks (Water, Condensate, Flash),</text>
+  <text x="400" y="670" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">Steam Distribution Pipeline Ducts, Header Pipelines, PEB Structural Steel Fabrication,</text>
+  <text x="400" y="695" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#555555">Rail &amp; Bus Coach Components, Air Blower Housings &amp; Material Handling Bins.</text>
+  
+  <!-- Standard Box -->
+  <rect x="250" y="760" width="300" height="70" fill="#0b1e36" rx="8"/>
+  <text x="400" y="790" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">COMPLIANCE STANDARD</text>
+  <text x="400" y="815" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#f57c00">ISO 9001:2015</text>
+  
+  <!-- Stamp / Seal Symbol -->
+  <circle cx="200" cy="940" r="50" fill="none" stroke="#f57c00" stroke-width="3"/>
+  <circle cx="200" cy="940" r="44" fill="none" stroke="#0b1e36" stroke-width="1.5"/>
+  <text x="200" y="935" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#0b1e36">QUALITY</text>
+  <text x="200" y="950" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f57c00">ASSURED</text>
+  
+  <!-- Signatures -->
+  <line x1="500" y1="960" x2="680" y2="960" stroke="#333333" stroke-width="1.5"/>
+  <text x="590" y="980" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0b1e36">Authorized Certification Signatory</text>
+  <text x="590" y="998" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#777777">Naveen Auto Components QMS Registrar</text>
+  
+  <!-- Footer -->
+  <text x="400" y="1050" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888888">Certificate Registration No: NAC-ISO-9001-2015-QMS • Original Issue Date: 2017 • Validated &amp; Certified</text>
+</svg>
