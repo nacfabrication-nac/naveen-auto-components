@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://naveenautocomponents.com/sitemap.xml
+Sitemap: https://www.naveenautocomponents.com/sitemap.xml
+
