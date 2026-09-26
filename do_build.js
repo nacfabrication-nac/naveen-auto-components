@@ -1,7 +1,7 @@
 import { build } from 'vite';
 import react from '@vitejs/plugin-react';
 
-console.log('Starting custom Vite build...');
+console.log('Starting custom Vite build on Z:/ ...');
 await build({
   configFile: false,
   root: 'Z:/',
@@ -14,4 +14,7 @@ await build({
     }
   }
 });
-console.log('Build completed successfully!');
+
+console.log('Vite build completed successfully. Running prerender.js...');
+await import('./prerender.js');
+console.log('All builds and prerendering complete!');
