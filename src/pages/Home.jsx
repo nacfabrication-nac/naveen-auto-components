@@ -48,7 +48,7 @@ export const Home = () => {
               { label: "Year Established", value: "2017" },
               { label: "Factory Covered Area", value: "~3,000 Sq Ft" },
               { label: "Monthly / Yearly Capacity", value: "60 Tons / 300-400 Tons" },
-              { label: "TOTAL OPEN SPACE", value: "1 Lakh Sq Ft" }
+              { label: "CUDDALORE UNIT II CAMPUS", value: "2.5 Acres" }
             ].map((stat, idx) => (
               <Col md={3} sm={6} key={idx}>
                 <div className="stat-box py-2">
@@ -69,10 +69,10 @@ export const Home = () => {
               ISO 9001:2015 Certified Precision Manufacturing
             </Badge>
             <h2 className="display-6 fw-bold text-navy mb-4">
-              Our 2 Fabrication Units Footprint in Chennai & Cuddalore
+              Our 2 Fabrication Units Footprint in Chennai &amp; Cuddalore
             </h2>
             <p className="lead text-secondary mx-auto max-w-800" style={{ fontSize: '1.15rem', lineHeight: '1.8' }}>
-              Established in 2017, <strong>Naveen Auto Components (NAC)</strong> performs ISO 9001:2015 certified heavy metal fabrication across <strong>2 manufacturing units</strong>: <strong>Thirumullaivoyal Unit (Fabrication Unit-1)</strong> in Chennai and <strong>Cuddalore Unit (Fabrication Unit-2)</strong>, supported by our Registered Office in Ambattur, featuring <strong>~3,000 Sq.Ft</strong> covered factory area and <strong>1 Lakh Sq.Ft</strong> total open space.
+              Established in 2017, <strong>Naveen Auto Components (NAC)</strong> performs ISO 9001:2015 certified heavy metal fabrication across <strong>2 manufacturing units</strong>: <strong>Thirumullaivoyal Unit (Fabrication Unit-1)</strong> in Chennai and <strong>Cuddalore Unit (Fabrication Unit-2)</strong>, supported by our Registered Office in Ambattur, featuring <strong>~3,000 Sq.Ft</strong> covered factory area and expansive <strong>2.5 Acres</strong> heavy manufacturing facility.
             </p>
           </div>
 
@@ -153,7 +153,7 @@ export const Home = () => {
                           <strong className="text-white"><i className="bi bi-building me-2 text-warning" style={{ color: '#f57c00' }}></i>Factory 1 (Chennai Unit):</strong> SIDCO Women's Industrial Park, Kattur, Thirumullaivoyal (~3,000 Sq.Ft covered shed, 10 MT EOT Crane, 6kW Fiber Laser).
                         </li>
                         <li className="mb-2">
-                          <strong className="text-white"><i className="bi bi-building-gear me-2 text-warning" style={{ color: '#f57c00' }}></i>Factory 2 (Cuddalore Unit):</strong> NH-32 Cuddalore-Chidambaram Road (2.5 Acres heavy structural facility &amp; 1 Lakh Sq.Ft open staging yard).
+                          <strong className="text-white"><i className="bi bi-building-gear me-2 text-warning" style={{ color: '#f57c00' }}></i>Factory 2 (Cuddalore Unit II):</strong> No-94/2D, Cuddalore-Chidambaram Road (NH-32), Kotthattai Village, Chidambaram - 608501 (2.5 Acres Heavy Structural Facility).
                         </li>
                         <li>
                           <strong className="text-white"><i className="bi bi-geo-fill me-2 text-warning" style={{ color: '#f57c00' }}></i>Registered Office:</strong> Ambattur Industrial Estate, Chennai - 600058.
@@ -447,7 +447,7 @@ export const Home = () => {
                 </div>
                 <h3 className="h5 fw-bold text-white mb-2">We Deliver</h3>
                 <p className="small text-white-50 mb-0" style={{ lineHeight: '1.7' }}>
-                  10 MT EOT crane maneuvering, 1 Lakh sq.ft total open space across 2 manufacturing units, and 100% on-time dispatch logistics across India.
+                  10 MT EOT crane maneuvering, 2.5 Acres heavy manufacturing campus across 2 units, and 100% on-time dispatch logistics across India.
                 </p>
               </div>
             </Col>
