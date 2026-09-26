@@ -83,7 +83,7 @@ export const Home = () => {
                 <Card.Body className="d-flex flex-column justify-content-between">
                   <div>
                     <div className="d-flex align-items-center mb-3">
-                      <div className="bg-navy rounded-circle p-2 me-3 d-flex align-items-center justify-content-center shadow-sm" style={{ width: '56px', height: '56px', backgroundColor: '#0b1e36', flexShrink: 0 }}>
+                      <div className="bg-white rounded-circle p-2 me-3 d-flex align-items-center justify-content-center shadow-sm border" style={{ width: '56px', height: '56px', flexShrink: 0 }}>
                         <img 
                           src="/images/logos/nac-logo-white-brand.webp" 
                           alt="Naveen Auto Components (NAC) Heavy Fabrication Logo" 
@@ -145,16 +145,32 @@ export const Home = () => {
                       </div>
                     </div>
                     <p className="small text-white-50 mb-3" style={{ lineHeight: '1.75' }}>
-                      Operating across <strong>2 manufacturing units</strong> to support high-volume heavy fabrication:
+                      Operating across <strong>2 manufacturing units</strong> to support high-volume heavy engineering &amp; processing equipment fabrication:
                     </p>
-                    <ul className="list-unstyled small text-white-50 mb-3">
-                      <li className="mb-2">
-                        <strong className="text-white"><i className="bi bi-building me-2 text-warning" style={{ color: '#f57c00' }}></i>Factory 1 (Chennai Unit):</strong> SIDCO Women's Industrial Park, Kattur, Thirumullaivoyal (~3,000 Sq.Ft covered shed with 10 MT EOT Overhead Crane).
-                      </li>
-                      <li className="mb-2">
-                        <strong className="text-white"><i className="bi bi-building-gear me-2 text-warning" style={{ color: '#f57c00' }}></i>Factory 2 (Cuddalore Unit):</strong> NH-32 Cuddalore-Chidambaram Road (2.5 Acres facility with 1 Lakh Sq.Ft total open staging space).
-                      </li>
-                    </ul>
+                    <div className="bg-dark bg-opacity-50 p-3 rounded-3 border border-secondary border-opacity-50 mb-3">
+                      <ul className="list-unstyled small text-white-50 mb-0">
+                        <li className="mb-2">
+                          <strong className="text-white"><i className="bi bi-building me-2 text-warning" style={{ color: '#f57c00' }}></i>Factory 1 (Chennai Unit):</strong> SIDCO Women's Industrial Park, Kattur, Thirumullaivoyal (~3,000 Sq.Ft covered shed, 10 MT EOT Crane, 6kW Fiber Laser).
+                        </li>
+                        <li className="mb-2">
+                          <strong className="text-white"><i className="bi bi-building-gear me-2 text-warning" style={{ color: '#f57c00' }}></i>Factory 2 (Cuddalore Unit):</strong> NH-32 Cuddalore-Chidambaram Road (2.5 Acres heavy structural facility &amp; 1 Lakh Sq.Ft open staging yard).
+                        </li>
+                        <li>
+                          <strong className="text-white"><i className="bi bi-geo-fill me-2 text-warning" style={{ color: '#f57c00' }}></i>Registered Office:</strong> Ambattur Industrial Estate, Chennai - 600058.
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="d-flex flex-wrap gap-2 mb-2">
+                      <span className="badge bg-secondary bg-opacity-20 text-warning border border-secondary border-opacity-50 px-2.5 py-1.5" style={{ fontSize: '0.75rem', color: '#f57c00' }}>
+                        <i className="bi bi-gear-fill me-1"></i> 6kW Fiber Laser
+                      </span>
+                      <span className="badge bg-secondary bg-opacity-20 text-warning border border-secondary border-opacity-50 px-2.5 py-1.5" style={{ fontSize: '0.75rem', color: '#f57c00' }}>
+                        <i className="bi bi-truck me-1"></i> 10 MT EOT Crane
+                      </span>
+                      <span className="badge bg-secondary bg-opacity-20 text-warning border border-secondary border-opacity-50 px-2.5 py-1.5" style={{ fontSize: '0.75rem', color: '#f57c00' }}>
+                        <i className="bi bi-bounding-box-circles me-1"></i> 16mm Plate Rolling
+                      </span>
+                    </div>
                   </div>
                   <div className="pt-3 border-top border-secondary d-flex align-items-center justify-content-between flex-wrap gap-2">
                     <a 
