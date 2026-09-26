@@ -48,7 +48,7 @@ export const Home = () => {
               { label: "Year Established", value: "2017" },
               { label: "Factory Covered Area", value: "~3,000 Sq Ft" },
               { label: "Monthly / Yearly Capacity", value: "60 Tons / 300-400 Tons" },
-              { label: "CUDDALORE UNIT II CAMPUS", value: "2.5 Acres" }
+              { label: "TOTAL OPEN SPACE", value: "1 Lakh Sq Ft" }
             ].map((stat, idx) => (
               <Col md={3} sm={6} key={idx}>
                 <div className="stat-box py-2">
