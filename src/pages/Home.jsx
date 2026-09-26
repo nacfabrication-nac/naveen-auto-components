@@ -77,77 +77,101 @@ export const Home = () => {
           </div>
 
           <Row className="g-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-            <Col lg={4} md={6}>
+            {/* Naveen Auto Components (NAC) High-SEO Overview Card */}
+            <Col lg={6} md={12}>
               <Card className="h-100 border-0 shadow-sm rounded-4 p-4 bg-light border-top border-warning border-4">
-                <Card.Body>
-                  <div className="d-flex align-items-center mb-3">
-                    <div className="bg-white rounded-circle p-2 me-3 d-flex align-items-center justify-content-center shadow-sm border border-light" style={{ width: '54px', height: '54px' }}>
-                      <img 
-                        src="/images/logos/varsha-technologies-logo.svg" 
-                        alt="Varsha Technologies Logo" 
-                        style={{ maxHeight: '38px', maxWidth: '38px', objectFit: 'contain' }} 
-                      />
+                <Card.Body className="d-flex flex-column justify-content-between">
+                  <div>
+                    <div className="d-flex align-items-center mb-3">
+                      <div className="bg-navy rounded-circle p-2 me-3 d-flex align-items-center justify-content-center shadow-sm" style={{ width: '56px', height: '56px', backgroundColor: '#0b1e36', flexShrink: 0 }}>
+                        <img 
+                          src="/images/logos/nac-logo-white-brand.webp" 
+                          alt="Naveen Auto Components (NAC) Heavy Fabrication Logo" 
+                          style={{ maxHeight: '40px', maxWidth: '40px', objectFit: 'contain' }} 
+                        />
+                      </div>
+                      <div>
+                        <h3 className="h5 fw-bold text-navy mb-0">Naveen Auto Components (NAC)</h3>
+                        <span className="small text-muted font-monospace">Est. 2017 • ISO 9001:2015 Certified Manufacturer</span>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="h5 fw-bold text-navy mb-0">Varsha Technologies</h3>
-                      <span className="small text-muted font-monospace">Est. 2000 • IATF 16949:2016</span>
+                    <p className="small text-secondary mb-3" style={{ lineHeight: '1.75' }}>
+                      Established in 2017, <strong>Naveen Auto Components (NAC)</strong> is an <strong>ISO 9001:2015 certified heavy engineering fabrication industry</strong> in Chennai &amp; Cuddalore. We provide turnkey manufacturing for ferrous &amp; non-ferrous metal fabrication, industrial process equipment, and customized heavy structural assemblies.
+                    </p>
+                    <div className="bg-white p-3 rounded-3 border border-light mb-3 shadow-sm">
+                      <h4 className="h6 fw-bold text-navy mb-2" style={{ color: '#0b1e36' }}>
+                        <i className="bi bi-gear-fill text-warning me-2" style={{ color: '#f57c00' }}></i>Core Fabrication Products:
+                      </h4>
+                      <div className="row g-2 small text-secondary">
+                        <div className="col-sm-6">
+                          <i className="bi bi-check2-circle text-warning me-1" style={{ color: '#f57c00' }}></i><strong>Storage Tanks:</strong> MS &amp; SS condensate / pressure vessels
+                        </div>
+                        <div className="col-sm-6">
+                          <i className="bi bi-check2-circle text-warning me-1" style={{ color: '#f57c00' }}></i><strong>Pipeline Ducts:</strong> Steam distribution &amp; header pipes
+                        </div>
+                        <div className="col-sm-6">
+                          <i className="bi bi-check2-circle text-warning me-1" style={{ color: '#f57c00' }}></i><strong>PEB Structural:</strong> Heavy H-beams &amp; support columns
+                        </div>
+                        <div className="col-sm-6">
+                          <i className="bi bi-check2-circle text-warning me-1" style={{ color: '#f57c00' }}></i><strong>Rail &amp; Bus Coach:</strong> Precision sheet metal parts
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <p className="small text-secondary mb-0" style={{ lineHeight: '1.7' }}>
-                    Specializing in high-precision CNC machined components, hot forging, heat treatment, and industrial shot blasting for automotive OEMs and valve manufacturing leaders across India.
-                  </p>
+                  <div className="d-flex align-items-center justify-content-between pt-2 border-top border-light">
+                    <span className="badge bg-navy px-3 py-2 text-white font-monospace" style={{ backgroundColor: '#0b1e36' }}>
+                      <i className="bi bi-shield-check text-warning me-1" style={{ color: '#f57c00' }}></i>ISO 9001:2015 Certified
+                    </span>
+                    <Link to="/about" className="small fw-bold text-warning text-decoration-none" style={{ color: '#f57c00' }}>
+                      Explore Full Profile <i className="bi bi-arrow-right ms-1"></i>
+                    </Link>
+                  </div>
                 </Card.Body>
               </Card>
             </Col>
 
-            <Col lg={4} md={6}>
-              <Card className="h-100 border-0 shadow-sm rounded-4 p-4 bg-light border-top border-warning border-4">
-                <Card.Body>
-                  <div className="d-flex align-items-center mb-3">
-                    <div className="bg-navy rounded-circle p-2 me-3 d-flex align-items-center justify-content-center shadow-sm" style={{ width: '54px', height: '54px', backgroundColor: '#0b1e36' }}>
-                      <img 
-                        src="/images/logos/nac-logo-white-brand.webp" 
-                        alt="Naveen Auto Components (NAC) White Logo" 
-                        style={{ maxHeight: '38px', maxWidth: '38px', objectFit: 'contain' }} 
-                      />
-                    </div>
-                    <div>
-                      <h3 className="h5 fw-bold text-navy mb-0">Naveen Auto Components (NAC)</h3>
-                      <span className="small text-muted font-monospace">Est. 2017 • ISO 9001:2015 Certified</span>
-                    </div>
-                  </div>
-                  <p className="small text-secondary mb-0" style={{ lineHeight: '1.7' }}>
-                    Established in 2017 as your turnkey one-stop solution for heavy ferrous & non-ferrous fabrication, industrial process equipment, PEB structures, pipeline ducts, and storage tanks.
-                  </p>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            <Col lg={4} md={12}>
+            {/* 2 Fabrication Units & Infrastructure Card */}
+            <Col lg={6} md={12}>
               <Card className="h-100 border-0 shadow-sm rounded-4 p-4 bg-navy text-white" style={{ backgroundColor: '#0b1e36' }}>
-                <Card.Body>
-                  <div className="d-flex align-items-center mb-3">
-                    <div className="bg-warning text-navy rounded-circle p-3 me-3 d-flex align-items-center justify-content-center" style={{ width: '54px', height: '54px', backgroundColor: '#f57c00' }}>
-                      <i className="bi bi-geo-alt-fill fs-4 text-white"></i>
+                <Card.Body className="d-flex flex-column justify-content-between">
+                  <div>
+                    <div className="d-flex align-items-center mb-3">
+                      <div className="bg-warning text-navy rounded-circle p-3 me-3 d-flex align-items-center justify-content-center shadow-sm" style={{ width: '56px', height: '56px', backgroundColor: '#f57c00', flexShrink: 0 }}>
+                        <i className="bi bi-geo-alt-fill fs-4 text-white"></i>
+                      </div>
+                      <div>
+                        <h3 className="h5 fw-bold text-white mb-0">2 Manufacturing Units &amp; Reg. Office</h3>
+                        <span className="small text-warning font-monospace" style={{ color: '#f57c00' }}>Ambattur, Thirumullaivoyal (Chennai) &amp; Cuddalore (NH-32)</span>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="h5 fw-bold text-white mb-0">2 Fabrication Units & Office</h3>
-                      <span className="small text-warning font-monospace">Ambattur, Thirumullaivoyal & Cuddalore</span>
-                    </div>
+                    <p className="small text-white-50 mb-3" style={{ lineHeight: '1.75' }}>
+                      Operating across <strong>2 manufacturing units</strong> to support high-volume heavy fabrication:
+                    </p>
+                    <ul className="list-unstyled small text-white-50 mb-3">
+                      <li className="mb-2">
+                        <strong className="text-white"><i className="bi bi-building me-2 text-warning" style={{ color: '#f57c00' }}></i>Factory 1 (Chennai Unit):</strong> SIDCO Women's Industrial Park, Kattur, Thirumullaivoyal (~3,000 Sq.Ft covered shed with 10 MT EOT Overhead Crane).
+                      </li>
+                      <li className="mb-2">
+                        <strong className="text-white"><i className="bi bi-building-gear me-2 text-warning" style={{ color: '#f57c00' }}></i>Factory 2 (Cuddalore Unit):</strong> NH-32 Cuddalore-Chidambaram Road (2.5 Acres facility with 1 Lakh Sq.Ft total open staging space).
+                      </li>
+                    </ul>
                   </div>
-                  <p className="small text-white-50 mb-3" style={{ lineHeight: '1.7' }}>
-                    Manufacturing across 2 units: <strong>Thirumullaivoyal (Fabrication Unit-1)</strong> and <strong>Cuddalore (Fabrication Unit-2)</strong> alongside our Ambattur Registered Office, featuring ~3,000 Sq.Ft factory area and 1 Lakh Sq.Ft total open space.
-                  </p>
-                  <a 
-                    href={companyData.googleShareLink || 'https://share.google/U57zAGwxO9ujDK0uy'} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="btn btn-outline-warning btn-sm fw-bold d-inline-flex align-items-center gap-2"
-                  >
-                    <i className="bi bi-google"></i>
-                    <span>Google Business Profile</span>
-                    <i className="bi bi-box-arrow-up-right fs-8"></i>
-                  </a>
+                  <div className="pt-3 border-top border-secondary d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <a 
+                      href={companyData.googleShareLink || 'https://share.google/U57zAGwxO9ujDK0uy'} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="btn btn-warning btn-sm fw-bold d-inline-flex align-items-center gap-2"
+                      style={{ backgroundColor: '#f57c00', borderColor: '#f57c00', color: '#fff' }}
+                    >
+                      <i className="bi bi-google"></i>
+                      <span>Google Business Profile</span>
+                      <i className="bi bi-box-arrow-up-right fs-8"></i>
+                    </a>
+                    <Link to="/facilities" className="small fw-bold text-warning text-decoration-none" style={{ color: '#f57c00' }}>
+                      View Machinery Specs <i className="bi bi-arrow-right ms-1"></i>
+                    </Link>
+                  </div>
                 </Card.Body>
               </Card>
             </Col>
